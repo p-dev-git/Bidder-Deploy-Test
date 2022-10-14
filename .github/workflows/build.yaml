@@ -2,10 +2,10 @@
 name: Build Test
 
 on:
+  workflow_dispatch:
+    types: [ demo-test ]
   push:
     branches: [ main ]
-  repository_dispatch:
-    types: [ demo-test ]
 
 jobs:
   build:
