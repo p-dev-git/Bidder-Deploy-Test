@@ -15,10 +15,10 @@ jobs:
       - name: Check Node v
         run: node -v
 
-      - name: Build test
-        run: |
-          npm install
-          npm run build
+      # - name: Build test
+      #   run: |
+      #     npm install
+      #     npm run build
 
       - name: bidder - Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
