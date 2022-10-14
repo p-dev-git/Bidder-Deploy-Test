@@ -2,8 +2,17 @@
 name: Build Test
 
 on:
+  # 스케줄 등록도 가능 
+  # schedule:
+  #   - cron: '55 22 * * *' # AM 07:55, South Korea!
   workflow_dispatch:
-    types: [ demo-test2 ]
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
   push:
     branches: [ main ]
 
