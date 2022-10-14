@@ -4,6 +4,8 @@ name: Build Test
 on:
   push:
     branches: [ main ]
+  repository_dispatch:
+    types: [ TRIGGER_API_TEST ]
 
 jobs:
   build:
