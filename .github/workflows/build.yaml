@@ -49,6 +49,6 @@ jobs:
           echo "::set-output name=image_tag::$IMAGE_TAG"
           cd ./Solution1/WebApplication1
           docker build -t biddertest .
-          docker tag biddertest:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_RESION }}.amazonaws.com/biddertest:latest
-          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_RESION }}.amazonaws.com/biddertest:latest
+          docker tag biddertest:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_RESION }}.amazonaws.com/biddertest:$IMAGE_TAG
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_RESION }}.amazonaws.com/biddertest:$IMAGE_TAG
 
