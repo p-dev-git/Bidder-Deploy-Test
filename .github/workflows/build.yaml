@@ -48,6 +48,6 @@ jobs:
           echo "::set-output name=ecr_repository::$ECR_REPOSITORY"
           echo "::set-output name=image_tag::$IMAGE_TAG"
           docker build -t biddertest .
-          docker tag biddertest:latest 170217667865.dkr.ecr.ap-northeast-2.amazonaws.com/biddertest:latest
-          docker push 170217667865.dkr.ecr.ap-northeast-2.amazonaws.com/biddertest:latest
+          docker tag biddertest:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-northeast-2.amazonaws.com/biddertest:latest
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-northeast-2.amazonaws.com/biddertest:latest
 
