@@ -15,8 +15,6 @@ on:
         description: 'Test scenario tags'
   # push:
   #   branches: [ main ]
-  # test주석
-  # test주석2
 
 jobs:
   build:
