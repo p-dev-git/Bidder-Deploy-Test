@@ -15,8 +15,6 @@ on:
         description: 'Test scenario tags'
   # push:
   #   branches: [ main ]
-  # testttesttest
-  #teststest
 
 jobs:
   build:
