@@ -14,6 +14,7 @@ WORKDIR /src
 
 #start
 COPY ["WebApplication1.csproj", ""]
+COPY "NuGet.Config" .  
 RUN dotnet restore "./WebApplication1.csproj"
 COPY . .
 WORKDIR "/src/."
